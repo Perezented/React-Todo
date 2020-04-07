@@ -65,3 +65,18 @@ We're going to practice building a stateful class component with this project. E
 -   **Search Functionality** Add a input bar that allows you to search through your tasks and only show the ones that match the search input.
 
 -   **Hosting** Create a [Netlify Account](https://www.netlify.com/) and follow the tutorial on how to host your shiny new todo app on the world wide web.
+
+
+<!-- @channel
+Tonight is the night we will be switching over to the new login for Slack. Below is what you need to do. If you have not received an @lambdastudents.com email, please disregard the below message, no action is required.    
+For current students that received an Okta activation email and a @lambdastudents.com email address:
+• Prior to 7pm Pacific tonight - make sure you know or have reset your current Slack password
+• For part-time students, you will have access to Slack during class - we ask that you follow the steps below after class is over. 
+• After 7pm Pacific tonight - you will need to log out of Slack
+• Closing Slack is not sufficient, you will need to go to click on your name in the top left corner and choose “Sign out of Lambda School Students” 
+• You will log in using your new @lambdastudents.com email address and your current Slack password 
+**Trying to complete the above steps prior to 7pm Pacific will not work**
+If you get locked out of Slack and cannot get back in - please email contact@lambdaschool.com 
+If you have questions prior to 7pm Pacific tonight - please look at the Student Guide here. 
+Please watch this short video to help with activating your Okta account. If you have issues prior to 7pm Pacific tonight activating your Okta account, please post in the channel #students_okta_support.
+Show less -->
