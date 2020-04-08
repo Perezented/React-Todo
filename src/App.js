@@ -35,21 +35,21 @@ class App extends React.Component {
     };
     toggleCompleted = (todoId) => {
         this.setState({
-            todoList: this.state.todoList.map((item) => {
-                if (todoId === item.id) {
+            todoList: this.state.todoList.map((todo) => {
+                if (todoId === todo.id) {
                     return {
-                        ...item,
-                        completed: !item.completed,
+                        ...todo,
+                        completed: !todo.completed,
                     };
                 }
-                return item;
+                return todo;
             }),
         });
     };
     clearCompleted = (e) => {
         e.preventDefault();
         this.setState({
-            todoList: this.state.todoList.filter(),
+            todoList: this.state.todoList.filter((todo) => !todo.completed),
         });
     };
     // you will need a place to store your state in this component.

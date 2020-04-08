@@ -30,7 +30,6 @@ class TodoForm extends React.Component {
                         <button>Add Todo</button>
                     </div>
                 </form>
-                <button>Clear Completed</button>
             </section>
         );
     }
