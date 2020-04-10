@@ -13,7 +13,7 @@ class TodoForm extends React.Component {
     submitTodo = (event) => {
         event.preventDefault();
         this.setState({ todoItem: '' });
-        this.props.addItem(event, this.state.item);
+        this.props.addItem(event, this.state.todoItem);
     };
     render() {
         return (

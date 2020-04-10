@@ -1,7 +1,6 @@
 import React from 'react';
-import Todo from './components/Todo';
-import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
 
 const todoList = [
     {
@@ -33,10 +32,12 @@ class App extends React.Component {
             todoList: [...this.state.todoList, newTodo],
         });
     };
-    toggleCompleted = (todoId) => {
+
+    toggleItem = (itemId) => {
+        console.log(itemId);
         this.setState({
             todoList: this.state.todoList.map((todo) => {
-                if (todoId === todo.id) {
+                if (itemId === todo.id) {
                     return {
                         ...todo,
                         completed: !todo.completed,
@@ -49,7 +50,9 @@ class App extends React.Component {
     clearCompleted = (e) => {
         e.preventDefault();
         this.setState({
-            todoList: this.state.todoList.filter((todo) => !todo.completed),
+            todoList: this.state.todoList.filter(
+                (todoItem) => !todoItem.completed
+            ),
         });
     };
     // you will need a place to store your state in this component.
@@ -57,15 +60,15 @@ class App extends React.Component {
     // this component is going to take care of state, and any change handlers you need to work with your state
     render() {
         return (
-            <div>
+            <div className="App">
                 <div>
                     <h2>Stuff ya need todo...</h2>
                     <TodoForm addItem={this.addItem} />
                 </div>
                 <div>
-                    <Todo
+                    <TodoList
                         todoList={this.state.todoList}
-                        toggleCompleted={this.toggleCompleted}
+                        toggleItem={this.toggleItem}
                         clearCompleted={this.clearCompleted}
                     />
                 </div>

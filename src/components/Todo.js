@@ -3,13 +3,9 @@ import React from 'react';
 const Todo = (props) => {
     console.log(props);
     return (
-        <>
-            {props.todoList.map((value) => {
-                console.log(value);
-                return <ul onClick={!value.task}>{value.task}</ul>;
-            })}
-            <button onClick={props.clearCompleted}>Clear Completed</button>
-        </>
+        <div onClick={() => props.toggleItem(props.item.id)}>
+            <p>{props.item.task}</p>
+        </div>
     );
 };
 export default Todo;
