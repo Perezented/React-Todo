@@ -1,5 +1,4 @@
 import React from 'react';
-
 class TodoForm extends React.Component {
     constructor() {
         super();
@@ -8,14 +7,16 @@ class TodoForm extends React.Component {
         };
     }
     handleChanges = (event) => {
+        console.log(event.target.value);
         this.setState({ [event.target.name]: event.target.value });
     };
     submitTodo = (event) => {
         event.preventDefault();
-        this.setState({ todoItem: '' });
         this.props.addItem(event, this.state.todoItem);
+        this.setState({ todoItem: '' });
     };
     render() {
+        console.log('yooooooo kiiiiiddd', this.state);
         return (
             <section>
                 <form onSubmit={this.submitTodo}>

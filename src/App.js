@@ -18,11 +18,10 @@ class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            todoList,
+            todoList: todoList,
         };
     }
-    addItem = (e, todoItem) => {
-        e.preventDefault();
+    addItem = (event, todoItem) => {
         const newTodo = {
             name: todoItem,
             id: Date.now(),
@@ -31,6 +30,7 @@ class App extends React.Component {
         this.setState({
             todoList: [...this.state.todoList, newTodo],
         });
+        // e.preventDefault();
     };
 
     toggleItem = (itemId) => {
@@ -48,17 +48,18 @@ class App extends React.Component {
         });
     };
     clearCompleted = (e) => {
-        e.preventDefault();
         this.setState({
             todoList: this.state.todoList.filter(
                 (todoItem) => !todoItem.completed
             ),
         });
+        e.preventDefault();
     };
     // you will need a place to store your state in this component.
     // design `App` to be the parent component of your application.
     // this component is going to take care of state, and any change handlers you need to work with your state
     render() {
+        console.log('App.js state:', this.state);
         return (
             <div className="App">
                 <div>
